@@ -1,0 +1,20 @@
+YAML
+check_interval: 5 
+services:
+  - name: "Google Main"
+    url: "https://www.google.com"
+    expected_status: 200
+    timeout: 3.0
+
+  - name: "JSONPlaceholder API"
+    url: "https://jsonplaceholder.typicode.com/posts/1"
+    expected_status: 200
+    timeout: 2.0
+
+  - name: "Örnek Hatalı Servis"
+    url: "https://httpbin.org/status/500"
+    expected_status: 200
+    timeout: 3.0
+
+notifications:
+  webhook_url: "" 
